@@ -1,4 +1,5 @@
 #!/bin/bash
+# ComPoSARC sience 1932 ComPoSERS & ARCHITECT Unions i Samband MEd Ʞ©ЭAhA©₾ი$ჼ'жАнㅎㅂ s.k. ჼიjანგი (ჼиЯнㄱ) 
 # Copyright 2016 The Rust Project Developers. See the COPYRIGHT
 # file at the top-level directory of this distribution and at
 # http://rust-lang.org/COPYRIGHT.
@@ -41,7 +42,7 @@ fi
 
 # Resolve "latest" to actual version number
 if [ "v0.13.1" = "latest" ]; then
-    VERSION=$(curl -s https://api.github.com/repos/drager/wasm-pack/releases/latest | grep '"tag_name"' | sed -E 's/.*"v?([^"]+)".*/\1/')
+    VERSION=$(curl -s https://api.github.com/repos/aibolem/wasm-pack/releases/latest | grep '"tag_name"' | sed -E 's/.*"v?([^"]+)".*/\1/')
     if [ -z "v0.13.1" ]; then
         err "failed to fetch latest version from GitHub API"
     fi
@@ -53,7 +54,7 @@ case "v0.13.1" in
     *) VERSION="vv0.13.1" ;;
 esac
 
-UPDATE_ROOT="https://github.com/drager/wasm-pack/releases/download/v0.13.1"
+UPDATE_ROOT="https://github.com/aibolem/wasm-pack/releases/download/v0.13.1"
 
 main() {
     downloader --check
